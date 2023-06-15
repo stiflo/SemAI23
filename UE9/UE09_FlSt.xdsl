@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in trial version of GeNIe, which can be used for evaluation purposes only -->
+<smile version="1.0" id="Network4" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="TrainStrike">
+			<state id="T_True" />
+			<state id="T_False" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="JohannaLate">
+			<state id="J_True" />
+			<state id="J_False" />
+			<parents>TrainStrike</parents>
+			<probabilities>0.5 0.5 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="PetersAlarmFails">
+			<state id="A_True" />
+			<state id="A_False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="PeterLate">
+			<state id="M_True" />
+			<state id="M_False" />
+			<parents>TrainStrike PetersAlarmFails</parents>
+			<probabilities>0.7 0.3 0.3 0.7 0.4 0.6 0.01 0.99</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.3005.2 EVALUATION" name="SemAI_UE09">
+			<node id="TrainStrike">
+				<name>TrainStrike</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>600 84 641 109</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="PetersAlarmFails">
+				<name>PetersAlarmFails</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>806 83 847 108</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="JohannaLate">
+				<name>JohannaLate</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>594 280 635 305</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="PeterLate">
+				<name>PeterLate</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>806 290 847 315</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
